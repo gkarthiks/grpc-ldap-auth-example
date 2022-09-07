@@ -1,0 +1,17 @@
+syntax = "proto3";
+package v1alpha1;
+option go_package = ".;v1alpha1";
+
+service SimpleLDAPService {
+  rpc SayHi(SayHiRequest) returns (SayHiResponse) {
+  }
+}
+
+
+message SayHiRequest {
+  string myName = 1;
+}
+
+message SayHiResponse {
+  string greetingResponse = 1;
+}
